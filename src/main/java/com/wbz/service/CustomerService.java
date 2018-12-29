@@ -9,7 +9,7 @@ public interface CustomerService {
 
 
     public PageInfo<Customer> findAllCustomers(int pageNum, int pageSize);
-
+    public void createCustomer(Customer customer);
     public Customer findCustomerById(Long id);
 
     public void updateCustomerState(Customer customer);

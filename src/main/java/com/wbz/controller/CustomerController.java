@@ -34,6 +34,17 @@ public class CustomerController {
         return customerService.findAllCustomers(pageNum,pageSize);
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/create")
+    public Map detail(HttpServletRequest req, HttpServletResponse res,Customer customer) throws Exception {
+
+        customerService.createCustomer(customer);
+        res.setHeader("Access-Control-Allow-Origin", "*");
+        res.setHeader("Access-Control-Allow-Methods", "GET, POST");
+        HashMap<String,Integer> message = new HashMap<>();
+        message.put("code",200);
+        return message;
+    }
 
     @ResponseBody
     @RequestMapping(value = "/detail")

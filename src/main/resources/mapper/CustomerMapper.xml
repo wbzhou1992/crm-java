@@ -31,6 +31,10 @@
 	 	delete FROM customer WHERE cust_id = #{cust_id}
 	</select>
 
+    <insert id = "createCustomer" parameterType="com.wbz.model.Customer" >
+	 	insert into customer(cust_name,cust_source,cust_industry,cust_level,cust_phone,cust_mobile)
+	 	values(#{cust_name},#{cust_source},#{cust_industry},#{cust_level},#{cust_phone},#{cust_mobile})
+	</insert>
 
     <!-- 更新成功 -->
     <update id="updateCustomerById" parameterType="com.wbz.model.Customer">

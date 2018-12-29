@@ -34,6 +34,12 @@ public class CustomerServiceImpl implements CustomerService {
         PageInfo result = new PageInfo(customer);
         return result;
     }
+    @Override
+    public void createCustomer(Customer customer) {
+
+        // TODO Auto-generated method stub
+        customerMapper.createCustomer(customer);
+    }
 
     @Override
     public void updateCustomerState(Customer customer) {
