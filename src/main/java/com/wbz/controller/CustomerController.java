@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
-import org.springframework.ui.Model;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -77,7 +76,7 @@ public class CustomerController {
         res.setHeader("Access-Control-Allow-Origin", "*");
         res.setHeader("Access-Control-Allow-Methods", "GET, POST");
         HashMap<String,Integer> message = new HashMap<>();
-        message.put("code",200);
+        message.put("date",200);
         return message;
     }
 }

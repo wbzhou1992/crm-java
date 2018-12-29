@@ -1,4 +1,4 @@
-基于springboot mybatis mysql简单的删改crm系统后台
+基于springboot mybatis mysql简单的增删改查crm系统后台
 
 前端代码在https://github.com/wbzhou1992/crm
 
