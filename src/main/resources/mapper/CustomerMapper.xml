@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wbz.dao.CustomerDao" >
-
     <sql id="customer_where">
         <where>
             <if test="custName != null and custName != ''">
@@ -32,8 +31,8 @@
 	</select>
 
     <insert id = "createCustomer" parameterType="com.wbz.model.Customer" >
-	 	insert into customer(cust_name,cust_source,cust_industry,cust_level,cust_phone,cust_mobile)
-	 	values(#{cust_name},#{cust_source},#{cust_industry},#{cust_level},#{cust_phone},#{cust_mobile})
+	 	insert into customer(cust_name,cust_source,cust_industry,cust_level,cust_phone,cust_mobile,cust_address,cust_linkman,cust_createtime)
+	 	values(#{cust_name},#{cust_source},#{cust_industry},#{cust_level},#{cust_phone},#{cust_mobile},#{cust_address},#{cust_linkman},#{cust_createtime,jdbcType=DATE})
 	</insert>
 
     <!-- 更新成功 -->

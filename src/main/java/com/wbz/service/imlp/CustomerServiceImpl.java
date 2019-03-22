@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Date;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
@@ -38,6 +39,9 @@ public class CustomerServiceImpl implements CustomerService {
     public void createCustomer(Customer customer) {
 
         // TODO Auto-generated method stub
+        if(customer.getCust_createtime()==null){
+            customer.setCust_createtime(new Date());
+        }
         customerMapper.createCustomer(customer);
     }
 
